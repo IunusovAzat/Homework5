@@ -3,62 +3,58 @@ public class Main {
         System.out.println("Hello world!");
 
         // Задание 1
-        int[] date = new int[3];
-        date[0] = 1;
-        date[1] = 2;
-        date[2] = 3;
-        System.out.println(date[0]);
-        System.out.println(date[1]);
-        System.out.println(date[2]);
-
+        int[] date = new int[4];
+        date[0] = 21;
+        date[1] = 13;
+        date[2] = 45;
+        date[3] = 8;
 
         double[] price = {1.57, 7.654, 9.986};
-        System.out.println(price[0]);
-        System.out.println(price[1]);
-        System.out.println(price[2]);
-        System.out.println();
 
+        int[] dayWeek = {6, 1, 3, 5, 2, 0, 7};
 
-        int[] dayWeek = {1, 2, 3, 4, 5, 6, 7};
-        for (int i = 0; i < dayWeek.length; i++) {
-            System.out.println("Сегодня - " + dayWeek[0] + " по счёту день недели.");
-            System.out.println("Сегодня - " + dayWeek[1] + " по счёту день недели.");
-            System.out.println("Сегодня - " + dayWeek[2] + " по счёту день недели.");
-            System.out.println("Сегодня - " + dayWeek[3] + " по счёту день недели.");
-            System.out.println("Сегодня - " + dayWeek[4] + " по счёту день недели.");
-            System.out.println("Сегодня - " + dayWeek[5] + " по счёту день недели.");
-            System.out.println("Сегодня - " + dayWeek[6] + " по счёту день недели.");
-            break;
-        }
-        System.out.println();
 
         // Задание 2
-        System.out.println(date[0] + "," + date[1] + "," + date[2]);
-        System.out.println(price[0] + "," + price[1] + "," + price[2]);
-        System.out.println(dayWeek[0] + "," + dayWeek[1] + "," + dayWeek[2] + "," + dayWeek[3] + "," + dayWeek[4] + ","
-                + dayWeek[5] + "," + dayWeek[6]);
+        for (int i = 0; i < date.length - 1; i++) {
+            System.out.print(date[i] + ",");
+        }
+        System.out.println(date[date.length - 1]);
+
+        for (int i = 0; i < price.length - 1; i++) {
+            System.out.print(price[i] + ",");
+        }
+        System.out.println(price[price.length - 1]);
+
+        for (int i = 0; i < dayWeek.length- 1; i++) {
+            System.out.print(dayWeek[i] + ",");
+        }
+        System.out.println(dayWeek[dayWeek.length - 1]);
         System.out.println();
 
+
         // Задание 3
-        System.out.println(date[2] + "," + date[1] + "," + date[0]);
-        System.out.println(price[2] + "," + price[1] + "," + price[0]);
-        System.out.println(dayWeek[6] + "," + dayWeek[5] + "," + dayWeek[4] + "," + dayWeek[3] + "," + dayWeek[2] + ","
-                + dayWeek[1] + "," + dayWeek[0]);
+        for (int i = date.length-1; i > 0 ; i--) {
+            System.out.print(date[i] + ",");
+        }
+        System.out.println(date[0]);
+
+        for (int i = price.length-1; i > 0 ; i--) {
+            System.out.print(price[i] + ",");
+        }
+        System.out.println(price[0]);
+
+        for (int i = dayWeek.length-1; i > 0 ; i--) {
+            System.out.print(dayWeek[i] + ",");
+        }
+        System.out.println(dayWeek[0]);
         System.out.println();
 
     // Задание 4
-        int [] human = new int[3];
-        human[0] = 2;
-        human[1] = 2;
-        human[2] = 4;
-        for ( int a = 0; a < human.length; a++) {
-            System.out.println(human[0]);
-            System.out.println(human[1]);
-            System.out.println(human[2]);
-            break;
+        for (int j = 0; j < date.length - 1; j++) {
+            if(date[j] % 2 != 0) date[j]++;
+            System.out.print(date[j] + ",");
         }
-
-
+        System.out.println(date[date.length - 1]);
     }
 }
 
